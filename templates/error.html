@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Error Page {% endblock %}
+
+{% block text %} <h1 style="text-align: center;">Weather and Air Quality Information</h1> {% endblock %}
+
+{% block content %} 
+    <h3 style="text-align: center;">The {{city}} you are looking for is not found.</h3>
+    <p style="text-align: center;">Please try with different city name.</p>
+    <div style="text-align: center;">
+        <img src= "https://i.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.webp" alt="Your Image" style="display: block; margin: auto;">
+      </div>
+{% endblock %}

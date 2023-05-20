@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %} Weather Information{% endblock %}
+
+{% block text %} <h1 style="text-align: center;">Welcome to Weather and Air Quality Information</h1>{% endblock %}
+
+{% block content %}
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">   Weather refers to the atmospheric conditions of a specific location at a given time.
+   It includes various elements such as temperature, humidity, precipitation, wind speed, cloud cover, and atmospheric pressure.
+   Weather conditions can change frequently and are influenced by factors like air pressure systems, temperature gradients, humidity levels, and the movement of air masses.
+   Understanding the weather is essential for a wide range of activities, including agriculture, transportation, planning outdoor events, and general daily life. 
+   Meteorologists study weather patterns and use various tools and technologies to observe, measure, and predict weather conditions.</p>
+<br>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">Weather forecasts provide information about future weather conditions, usually for a few days ahead. 
+    They are based on scientific models that analyze historical data, current observations, and atmospheric patterns to make predictions. 
+    Forecasts may include details like temperature ranges, precipitation probabilities, wind speeds, and general weather conditions.
+    It's important to note that weather can vary significantly from one location to another, and it can change rapidly. 
+    Therefore, it's advisable to consult reliable weather sources or use weather apps for accurate and up-to-date information specific to your area of interest.</p>
+
+<h1>Temperature:</h1>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">The measure of hotness or coldness of the air. 
+    It is typically measured in degrees Celsius (°C) or Fahrenheit (°F).</p>
+<br>
+<h1>Humidity:</h1>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">The amount of moisture present in the air. 
+    It can affect how hot or cold it feels and influence the likelihood of precipitation.</p>
+<br>
+<h1>Precipitation:</h1>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">Any form of water that falls from the atmosphere to the Earth's surface, such as rain, snow, sleet, or hail.</p>
+<br>
+<h1>Wind:</h1>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">The movement of air in the atmosphere, characterized by its speed and direction.</p>
+<br>
+<h1>Cloud Cover:</h1>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">The extent to which the sky is covered by clouds. It can range from clear (no clouds) to overcast (fully covered).</p>
+<br>
+<h1>Atmospheric Pressure:</h1>
+<p style="font-size: 22px; text-align: justify; text-indent: 4em">The force exerted by the weight of the air in the atmosphere. It is often measured in units such as millibars (mb) or hectopascals (hPa).</p>
+<br>
+<h1>US-EPA Index:</h1>
+<table class="table table-hover" style="text-align: center;">
+    <tr>
+        <th scope="col">Index Level</th>
+        <th scope="col">Description</th>
+    </tr>
+    <tr>
+        <th scope="row">1 (Good)</th>
+        <td style="text-align: left;">Air quality is considered satisfactory, and air pollution poses little or no risk.</td>
+    </tr>
+    <tr>
+        <th scope="row">2 (Moderate)</th>
+        <td style="text-align: left;">Air quality is acceptable, but there may be a moderate health concern for a very small number of individuals.</td>
+    </tr>
+    <tr>
+        <th scope="row">3 (Unhealthy for Sensitive Groups)</th>
+        <td style="text-align: left;">Members of sensitive groups may experience health effects. The general public is less likely to be affected.</td>
+    </tr>
+    <tr>
+        <th scope="row">4 (Unhealthy)</th>
+        <td style="text-align: left;">Some members of the general public may experience health effects; sensitive groups may experience more serious health effects.</td>
+    </tr>
+    <tr>
+        <th scope="row">5 (Very Unhealthy)</th>
+        <td style="text-align: left;">Health alert: The risk of health effects is increased for everyone.</td>
+    </tr>
+    <tr>
+        <th scope="row">6 (Hazardous)</th>
+        <td style="text-align: left;">Health warning of emergency conditions: The entire population is more likely to be affected.</td>
+    </tr>
+</table>
+<br>
+<h1>GB DEFRA Index:</h1>
+<table class="table table-hover" style="text-align: center;">
+    <tr>
+        <th scope="col">Index</th>
+        <th scope="col">Band</th>
+    </tr>
+    <tr>
+        <th scope="row">1</th>
+        <td style="text-align: center;">Low</td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td style="text-align: center;">Low</td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td style="text-align: center;">Low</td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td style="text-align: center;">Moderate</td>
+    </tr>
+    <tr>
+        <th scope="row">5</th>
+        <td style="text-align: center;">Moderate</td>
+    </tr>
+    <tr>
+        <th scope="row">6</th>
+        <td style="text-align: center;">Moderate</td>
+    </tr>
+    <tr>
+        <th scope="row">7</th>
+        <td style="text-align: center;">High</td>
+    </tr>
+    <tr>
+        <th scope="row">8</th>
+        <td style="text-align: center;">High</td>
+    </tr>
+    <tr>
+        <th scope="row">9</th>
+        <td style="text-align: center;">High</td>
+    </tr>
+    <tr>
+        <th scope="row">10</th>
+        <td style="text-align: center;">Very High</td>
+    </tr>
+</table>
+{% endblock %}

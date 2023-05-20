@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %} {{data["city"]}} Weather Information {% endblock %}
+
+{% block text %}<h1 style="text-align: center;">{{data["city"]}} Weather and AQI Information</h1> {% endblock %}
+
+{% block content %}
+<h1 style="text-align: center;">{{data["city"]}} Weather Information</h1>
+<br> 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9zUKOxMGE30GDpzN_cnLDrygEvYnqRoJxDw" class="card-img-top" alt="location" style="height: 150px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Location</h4>
+          <p class="card-text"><b>City : </b>{{data["city"]}}</p>
+          <p class="card-text"><b>State : </b>{{data["state"]}}</p>
+          <p class="card-text"><b>Country : </b>{{data["country"]}}</p>
+          <p class="card-text"><b>Time Zone : </b>{{data["time_zone"]}}</p>
+          <p class="card-text"><b>Date & Time : </b>{{data["time"]}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyUHvKfCxk4Nk5O1Fl_5yWxRnQLOl2T-MDKw" class="card-img-top" alt="temperature" style="height: 150px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Temperature</h4>
+          <p class="card-text"><b>Temperature in Celsius : </b>{{data["temp_in_c"]}}&deg;C</p>
+          <p class="card-text"><b>Temperature in Farenheit : </b>{{data["temp_in_f"]}}&deg;F</p>
+          <p class="card-text"><b>Temperature Feels Like in Celsius : </b>{{data["feels_like_in_c"]}}&deg;C</p>
+          <p class="card-text"><b>Temperature Feels Like in Farenheit : </b>{{data["feels_like_in_f"]}}&deg;F</p>
+          <p class="card-text"><b>UV Index : </b>{{data["uv"]}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUOHd7UeUEL4-duzmVLtWyw6qb8OTF7o6vIoYP_VTIzN_MjDCK0t5HTzmlvC7DKZKnTQI" class="card-img-top" alt="astronomy" style="height: 150px">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Astronomy</h4>
+          <p class="card-text"><b>Sun Rise : </b>{{data["sun_rise"]}}</p>
+          <p class="card-text"><b>Sun Set : </b>{{data["sun_set"]}}</p>
+          <p class="card-text"><b>Moon Rise : </b>{{data["moon_rise"]}}</p>
+          <p class="card-text"><b>Moon Set : </b>{{data["moon_set"]}}</p>
+          <p class="card-text"><b>Moon Phase : </b>{{data["moon_phase"]}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+</div>
+
+<br>
+<h1 style="text-align: center;">{{data["city"]}} Wind and Pressure Information</h1>
+<br> 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhexg9XJXo13Aa4h9fxr85wR3yZL7QYCFUhA" class="card-img-top" alt="wind" style="height: 150px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Wind</h4>
+          <p class="card-text"><b>Wind Speed in Kilometer Per Hour : </b>{{data["wind_speed_in_k"]}} kmph</p>
+          <p class="card-text"><b>Wind Speed in Miles Per Hour : </b>{{data["wind_speed_in_m"]}} mph</p>
+          <p class="card-text"><b>Wind Direction : </b>{{data["wind_dir"]}}</p>
+          <p class="card-text"><b>Wind Degree : </b>{{data["wind_degree"]}}&deg;</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_9g0TTvAyYRo2I_Je9_TJEwXrLka7si0-Uw" class="card-img-top" alt="pressure" style="height: 150px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Pressure</h4>
+          <p class="card-text"><b>Pressure in Millibars : </b>{{data["pressure_mb"]}} mb</p>
+          <p class="card-text"><b>Pressure in Inches : </b>{{data["pressure_in"]}} in</p>
+          <p class="card-text"><b>Percipitation Amount in Millimeters : </b>{{data["precip_mm"]}} mm</p>
+          <p class="card-text"><b>Percipitation Amount in Inches : </b>{{data["precip_in"]}} in</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-vstBJY1pJ2cjtD_7idrEiq31wQ_8F28-3Q" class="card-img-top" alt="visibility" style="height: 150px">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Visibility & Gust Speed</h4>
+          <p class="card-text"><b>Visibility in Kilometer : </b>{{data["vis_km"]}} KM</p>
+          <p class="card-text"><b>Visibility in Miles : </b>{{data["vis_miles"]}} M</p>
+          <p class="card-text"><b>Wind Gust in Kilometer Per Hour : </b>{{data["gust_kph"]}} kmph</p>
+          <p class="card-text"><b>Wind Gust in Miles Per Hour : </b>{{data["gust_mph"]}} mph</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<h1 style="text-align: center;">{{data["city"]}} Air Quality & Cloud Information</h1>
+<br> 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuFsHeDzY0TUhA0bG0OXd-d_V6KsDfQERKEg" class="card-img-top" alt="cloud" style="height: 150px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Cloud Details</h4>
+          <p class="card-text"><b>Cloud Cover in Percentage : </b>{{data["cloud"]}}%</p>
+          <p class="card-text"><b>Humidity in Percentage : </b>{{data["humidity"]}}%</p>
+          <p class="card-text"><b>Weather Condition : </b>{{data["weather_condition"]}}</p>
+          <p class="card-text"><b>Weather Condition Image : </b><img src="{{data['weather_image']}}" alt="weather_image", style="height: 64px; width: 64px"></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZcwchx9hXF-xpM-333z1ut743E-bT86iYGA" class="card-img-top" alt="aqi" style="height: 150px;">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Air Quality</h4>
+          <p class="card-text"><b>Carbon Monoxide : </b>{{data["co"]}} &#181;g/m&sup3;</p>
+          <p class="card-text"><b>Nitrogen Di-Oxide : </b>{{data["no2"]}} &#181;g/m&sup3;</p>
+          <p class="card-text"><b>Ozone : </b>{{data["o3"]}} &#181;g/m&sup3;</p>
+          <p class="card-text"><b>Sulphur Di-Oxide : </b>{{data["so2"]}} &#181;g/m&sup3;</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZcwchx9hXF-xpM-333z1ut743E-bT86iYGA" class="card-img-top" alt="aqi" style="height: 150px">
+        <div class="card-body">
+          <h4 class="card-title" style="text-align: center;">Particulate Matter & AQI Index</h4>
+          <p class="card-text"><b>PM 2.5 : </b>{{data["pm_2.5"]}} &#181;g/m&sup3;</p>
+          <p class="card-text"><b>PM 10 : </b>{{data["pm_10"]}} &#181;g/m&sup3;</p>
+          <p class="card-text"><b>US EPA Index : </b>{{data["us_index"]}}</p>
+          <p class="card-text"><b>Global DEFRA Index : </b>{{data["gb_index"]}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated {{data["last_update"]}}</small>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
